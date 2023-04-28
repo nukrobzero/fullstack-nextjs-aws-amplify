@@ -4,9 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import LayoutAdmin from "../Layout/layout";
-import { API, graphqlOperation } from "aws-amplify";
+import { API, graphqlOperation, Storage } from "aws-amplify";
 import { createBlog } from "@/pages/api/graphql/mutations";
-import { Storage } from "aws-amplify";
 import { v4 as uuidv4 } from "uuid";
 
 interface Props {
@@ -82,7 +81,6 @@ export default function FormBlog({
           },
         })
       );
-      console.log(newBlog);
       router.push("/dashboard/blogs");
     } catch (error) {
       console.error(error);
