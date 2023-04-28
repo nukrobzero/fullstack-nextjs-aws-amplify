@@ -14,6 +14,7 @@
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "@types/uuid": "^9.0.1",
+    "antd": "^5.4.6",
     "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
@@ -22,6 +23,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-paginate": "^8.2.0",
+    "react-slideshow-image": "^4.2.1",
     "suneditor-react": "^3.5.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"

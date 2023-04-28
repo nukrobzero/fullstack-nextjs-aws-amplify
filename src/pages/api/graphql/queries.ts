@@ -88,6 +88,53 @@ export const listBlogs = /* GraphQL */ `
     }
   }
 `;
+
+export const listBlogsFront = /* GraphQL */ `
+  query ListBlogs(
+    $filter: ModelBlogFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        title
+        slug
+        coverImage
+        date
+        status
+        category {
+          id
+          title
+        }
+      }
+      nextToken
+    }
+  }
+`;
+
+export const listBlogsAdmin = /* GraphQL */ `
+  query ListBlogsAdmin(
+    $filter: ModelBlogFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        title
+        slug
+        date
+        status
+        category {
+          id
+          title
+        }
+      }
+      nextToken
+    }
+  }
+`;
 export const getNews = /* GraphQL */ `
   query GetNews($id: ID!) {
     getNews(id: $id) {

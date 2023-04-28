@@ -107,24 +107,6 @@ export const deleteBlog = /* GraphQL */ `
   ) {
     deleteBlog(input: $input, condition: $condition) {
       id
-      title
-      slug
-      coverImage
-      content
-      description
-      keywords
-      date
-      status
-      createdAt
-      category {
-        id
-        title
-        description
-        createdAt
-        updatedAt
-      }
-      updatedAt
-      blogCategoryId
     }
   }
 `;

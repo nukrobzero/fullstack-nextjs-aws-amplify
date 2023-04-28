@@ -26,12 +26,12 @@ export default function LayoutAdmin({ children }: Props) {
   //console.log(user);
 
   return (
-    <div className="">
+    <div>
       <Authenticator hideSignUp={true} className="h-screen">
         <main>
-          <div className="flex flex-row">
+          <div className="flex flex-row bg-[#FDEBD0] min-h-screen">
             <Sidebar />
-            <div className="max-w-screen-xl mx-auto p-4">{children}</div>
+            <div className="mx-auto w-[70%] p-4">{children}</div>
           </div>
         </main>
       </Authenticator>

@@ -25,7 +25,7 @@ export default function Sidebar() {
   return (
     <div className={`${isOpen ? "w-64" : "w-16"} transition-all shadow-md`}>
       <div
-        className={`flex flex-col fixed h-screen ${
+        className={`flex flex-col fixed z-50 h-screen ${
           isOpen ? "w-64" : "w-16"
         } bg-white border-r border-gray-200`}
       >
@@ -73,6 +73,19 @@ export default function Sidebar() {
               size={30}
             />
             <span className={`${isOpen ? "block" : "hidden"}`}>Blogs</span>
+          </Link>
+          <Link
+            href="/dashboard/news"
+            className={`flex flex-row items-center hover:bg-gray-200 py-4 px-2 rounded-lg transition duration-300 ease-in-out ${
+              isOpen ? "" : "justify-center items-center"
+            }`}
+            title="News"
+          >
+            <ImBlogger
+              className={`inline-block ${isOpen ? "mr-2" : "mr-0"}`}
+              size={30}
+            />
+            <span className={`${isOpen ? "block" : "hidden"}`}>News</span>
           </Link>
           <Link
             href="/users"
